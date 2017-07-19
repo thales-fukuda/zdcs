@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import bs4 as bs
 import urllib.request
 import sys
@@ -12,3 +14,4 @@ def main():
     print(horoscopo.get_text())
 
 if __name__ == "__main__" : main()
+
