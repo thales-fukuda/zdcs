@@ -18,6 +18,6 @@ def main():
 
     # Printing
     print("\n", site.title.text, "\n \n", horoscope.get_text(), "\n")
-    #test
+    
 if __name__ == "__main__" : main()
 
