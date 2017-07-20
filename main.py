@@ -6,9 +6,19 @@ import urllib.request
 import sys
 
 def main(): 
+    # Available signs
+    signs = ['aquarius', 'pisces', 'aries', 'taurus'
+             'gemini', 'cancer', 'leo', 'virgo',
+             'libra', 'scorpio', 'sagittarius', 'capricorn']
+
     # Getting the sign as parameter
-    sign = sys.argv[1]
-    
+    sign = sys.argv[1].lower()
+
+    # Check if parameter is a valid sign
+    if sign not in signs:
+        print("\n   Parameter is not a sign, maybe you misstyped it")
+        return
+
     # Getting the URL based on the sign and accessing it
     source = urllib.request.urlopen('https://www.astrology.com/horoscope/daily/' + sign + '.html')
     site = bs.BeautifulSoup(source, 'lxml')
