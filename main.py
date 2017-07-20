@@ -15,6 +15,7 @@ def main():
 
     # Finding the div with  the prediction
     horoscope = soup.find('div' , {'class': 'page-horoscope-text'})
+
     # Printing
     print("\n", soup.title.text, "\n \n", horoscope.get_text(), "\n")
 
