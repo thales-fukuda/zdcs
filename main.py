@@ -50,7 +50,7 @@ def main():
     horoscope = site.find('div' , {'class': 'page-horoscope-text'})
 
     # Printing
-    print("\n", site.title.text, "\n \n", horoscope.get_text(), "\n")
+    print("\n    " + site.title.text + "\n\n    " + horoscope.get_text() + "\n")
     
 if __name__ == "__main__" : main()
 
