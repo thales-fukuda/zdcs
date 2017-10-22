@@ -46,7 +46,7 @@ def main():
     source = urllib.request.urlopen('https://www.astrology.com/horoscope/daily/' + sign + '.html')
     site = bs.BeautifulSoup(source, 'lxml')
 
-    # Finding the div with  the prediction
+    # Finding the <p> with  the prediction
     horoscope = site.find('p')
 
     # Printing
