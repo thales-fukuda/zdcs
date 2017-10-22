@@ -47,7 +47,7 @@ def main():
     site = bs.BeautifulSoup(source, 'lxml')
 
     # Finding the div with  the prediction
-    horoscope = site.find('div' , {'class': 'page-horoscope-text'})
+    horoscope = site.find('p')
 
     # Printing
     print("\n    " + site.title.text + "\n\n    " + horoscope.get_text() + "\n")
